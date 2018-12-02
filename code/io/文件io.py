@@ -14,7 +14,7 @@
 file = open('三元操作符.py')
 print(file) #<_io.TextIOWrapper name='三元操作符.py' mode='r' encoding='cp936'>
 #读取文件,read()
-#print(file.read())  #不指定参数则读至文件末尾
+#print(io.read())  #不指定参数则读至文件末尾
 print(file.read(10))    #指定则读取默认字符个
 print(file.tell())  #返回当前指针指向的位置(字节数)
 file.seek(0, 0) #第一个参数offset,代表偏移字节数
@@ -35,7 +35,7 @@ print(file.tell())
 #写文件
 write_file = open('file_write.txt', 'w')
 write_file.write('Hello,World\n')  #将字符串写入文件
-#print(help(file))
+#print(help(io))
 #write_file.write(write_file.newlines())
 write_file.write('你好python\n')
 write_file.writelines(('nihao\n',str(123)+'\n','hehhe')) #传入一个序列,会将序列依次写入文件(不带换行)
