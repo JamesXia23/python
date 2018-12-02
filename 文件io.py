@@ -26,10 +26,12 @@ print(file.readline())  #一次读一行
 print(list(file))   #可以将文件字节转化为列表,按换行来分
 
 file.seek(0, 0)
+print(file.tell())  # 获取文件当前偏移
 for each_line in file:  #可以直接遍历文件,也是按换行来分
     #print(each_line)    #不过这样换行符也会读出来
     print(each_line, end="")
 
+print(file.tell())
 #写文件
 write_file = open('file_write.txt', 'w')
 write_file.write('Hello,World\n')  #将字符串写入文件
